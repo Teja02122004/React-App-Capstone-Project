@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Little Lemon - Welcome</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(reg => console.log('Service Worker registered'))
+      .catch(err => console.log('Service Worker error', err));
+  }
+</script>
+<body>
+  <img src="images/logo.png" alt="Lemon" style="width:200px;">
+  <h1>Welcome to Little Lemon</h1>
+  <p>Fresh Mediterranean flavors, delivered to you.</p>
+
+  <form action="home.html" method="get">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <button type="submit" class="start-button">Let’s Get Started</button>
+  </form>
+</body>
+</html>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Little Lemon. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
